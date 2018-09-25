@@ -4,7 +4,7 @@ This image is based of the docker image provided by NVIDIA that allows access to
 
 
 # Running openpose
- To run the openpose from this image, use the following command: `docker run -t -i --net=host -e DISPLAY --device=/dev/video0 --runtime=nvidia -v $HOME/.Xauthority:/home/developer/.Xauthority --rm 721466574657.dkr.ecr.us-east-1.amazonaws.com/openpose:latest`. The default CMDs run the hand and face detection, but you can change this by passing additional arguments at the end of the command line.
+ To run the openpose from this image, use the following command: `docker run -t -i --net=host -e $DISPLAY --device=/dev/video0 --runtime=nvidia -v $HOME/.Xauthority:/home/developer/.Xauthority --rm 721466574657.dkr.ecr.us-east-1.amazonaws.com/openpose:latest`. The default CMDs run the hand and face detection, but you can change this by passing additional arguments at the end of the command line.
  
  This assumes that `/dev/video0` is the webcam you want to use - it must be exposed to the docker container. 
 ### Potential problems: 
