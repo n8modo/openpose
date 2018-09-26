@@ -1,6 +1,7 @@
 # A prebuilt openpose enviroment compiled to work with CUDA 9.0
 
 This image is based of the docker image provided by NVIDIA that allows access to the graphics card from a docker enviroment. To use this, the docker host must be [prepared](https://github.com/NVIDIA/nvidia-docker). 
+***NOTE***: The official installation instructions in the previous link don't seem to result in a working build on Ubuntu 16.04, follow [these](https://gist.github.com/Brainiarc7/a8ab5f89494d053003454efc3be2d2ef) if you run into problems. 
 
 
 # Running openpose
