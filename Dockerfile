@@ -15,6 +15,6 @@ RUN git clone https://github.com/CMU-Perceptual-Computing-Lab/openpose
 WORKDIR /openpose 
 # NOTE: Since the GPU is not availble via the --runtime flag like it is when the container is run
 # we must specify the architetures to build here, else it tries to build the sm_20 arch which CUDA 9 does not support.
-RUN mkdir build && cd build && cmake -DCUDA_ARCH=Manual -DCUDA_ARCH_BIN="35 52 60 61 70" -DCUDA_ARCH_PTX="70" .. && make -j`nproc`
+RUN mkdir build && cd build && cmake -DCUDA_ARCH=Manual -DCUDA_ARCH_BIN="35 52 60 61 70" -DCUDA_ARCH_PTX="70" .. && make -j`nproc` && make install
 ENTRYPOINT ["./build/examples/openpose/openpose.bin"]
 CMD ["--face","--hand"]
