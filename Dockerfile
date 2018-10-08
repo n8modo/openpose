@@ -5,7 +5,7 @@
 # To publish it" `docker push 721466574657.dkr.ecr.us-east-1.amazonaws.com/openpose:latest`
 # For additional command line params: https://github.com/CMU-Perceptual-Computing-Lab/openpose/blob/master/doc/demo_overview.md
 
-FROM nvidia/cuda:9.0-cudnn7-devel-ubuntu16.04
+FROM nvidia/cuda:9.2-cudnn7-devel-ubuntu16.04
 MAINTAINER Edmodo
 
 RUN apt-get update && apt-get install -y cmake git sudo python3-pip build-essential libatlas-base-dev libprotobuf-dev libleveldb-dev libsnappy-dev libhdf5-serial-dev protobuf-compiler libgflags-dev libopencv-dev libgoogle-glog-dev liblmdb-dev libboost-all-dev && \ 
